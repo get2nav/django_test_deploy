@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+{% extends "test_app/base.html" %}
+{% block body_block %}
+    <h1>index page</h1>
+    <p>{{name|cut:"index"}}</p>
+    <p>{{number|add:'99'}}</p>
+{% endblock %}

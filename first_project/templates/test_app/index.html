@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Django test page</title>
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
+  </head>
+  <body>
+    <h1> welcome naveen</h1>
+    <!-- <img src="{% static "images/pic.jpg" %}" alt="not working"> -->
+    {{form}}
+    <div class="django_Table">
+      {% if access_records %}
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Date</th>
+        </thead>
+          {% for i in access_records%}
+          <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.date}}</td>
+          </tr>
+          {% endfor %}
+      </table>
+      {% else %}
+      <p> error found </p>
+
+      {% endif %}
+      </div>
+
+
+
+
+
+
+  </body>
+</html>
